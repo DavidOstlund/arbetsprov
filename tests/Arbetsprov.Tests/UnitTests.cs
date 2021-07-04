@@ -13,7 +13,7 @@ namespace Arbetsprov.Tests {
             var query = "query";
             
             var controller = new ApiController();
-            var actionResult = controller.Search(query) as ObjectResult;
+            var actionResult = controller.SearchAsync(query) as ObjectResult;
             var result = actionResult.Value as SearchResult;
 
             Assert.Equal(result.Query, query);
